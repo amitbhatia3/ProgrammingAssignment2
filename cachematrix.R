@@ -12,6 +12,7 @@
 # makeCacheMatrix creates the Matrix object x and creates functions
 # related to getting/setting x and getting/setting its inverse i
 
+
 makeCacheMatrix <- function(x = matrix()) {
 	i <- NULL
 	set <- function(y) {
@@ -35,7 +36,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getinv()
-	if(!is.null(m)) {
+	if(!is.null(i)) {
 		message("getting cached data")
 		return(i)
 	}
